@@ -2,7 +2,7 @@
 
 import {
   UserGroupIcon,
-  HomeIcon,
+  ClipboardIcon,
   DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -13,9 +13,9 @@ import clsx from 'clsx';
 // Depending on the size of the application, this would be stored in a database.
 const links = [
   { 
-    name: 'Home',
+    name: 'Dashboard',
     href: '/dashboard',
-    icon: HomeIcon
+    icon: ClipboardIcon
   },
   {
     name: 'Invoices',
@@ -42,9 +42,9 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
+              'flex h-[48px] grow items-center justify-center gap-2 border border-solid border-black rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-neutral-200 md:flex-none md:justify-start md:p-2 md:px-3',
               {
-                'bg-sky-100 text-blue-600': pathname === link.href
+                'bg-neutral-200': pathname === link.href
               }
             )}
           >

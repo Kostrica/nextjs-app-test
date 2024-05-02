@@ -1,0 +1,20 @@
+$c-red: red;
+$c-blue: #1300ff;
+$c-mint: #95f2fd;
+$size-square: 200px;
+
+@mixin box-square($size: 100px, $bg-color: $c-red) {
+  width: $size;
+  height: $size;
+  background-color: $bg-color;
+}
+
+@mixin box-round($size: 100px, $bg-color: $c-red) {
+  @include box-square($size, $bg-color);
+  border-radius: 50%;
+}
+
+.Box {
+  @include box-round($size-square, $c-mint);
+  cursor: pointer;
+}
