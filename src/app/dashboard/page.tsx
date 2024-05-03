@@ -15,7 +15,7 @@ export default function DashboardPage() {
       transition={{ duration: 1 }}
     >
       <div className="flex flex-col items-center justify-between">
-        <p className="text-3xl mb-24">Dashboard Page</p>
+        <h3 className="text-3xl mb-24">Dashboard Page</h3>
         <motion.div
           className={clsx(styles.Box)}
           initial={{ opacity: 0, scale: 0.5 }}

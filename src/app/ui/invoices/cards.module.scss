@@ -1,0 +1,55 @@
+.CardsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.CardsList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.CardBox {
+  position: relative;
+}
+
+.Card,
+.BottomLayerCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 200px;
+  height: 300px;
+  background-color: #687b94;
+  border-radius: 10px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.Card {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid gray;
+  font-size: 120px;
+  opacity: 1;
+  z-index: 2;
+  cursor: pointer;
+}
+
+@media (max-width: 74.999em) {
+  .CardsList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 29.999em) {
+  .CardsList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

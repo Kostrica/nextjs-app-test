@@ -4,7 +4,10 @@ import { Game, Action } from './types';
 const GameContext = createContext<null | Game>(null);
 const GameDispatchContext = createContext(null);
 
-export function GameProvider({ children }: any) {
+
+export function GameProvider(
+  { children }: { children: React.ReactNode }
+) {
   const [game, dispatch]: [Game, any] = useReducer(gameReducer, initialGame);
 
   return (
